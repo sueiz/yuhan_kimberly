@@ -1,8 +1,8 @@
 $(function () {
     //start    
 
-    $('header').load('http://sueiz.dothome.co.kr/yuhan-kimberly/inc_head_foot.html .header-wrap', header); // header 함수
-    $('footer').load('http://sueiz.dothome.co.kr/yuhan-kimberly/inc_head_foot.html../inc_head_foot.html footer');
+    $('header').load('https://sueiz.github.io/yuhan_kimberly/inc_head_foot .header-wrap', header); // header 함수
+    $('footer').load('https://sueiz.github.io/yuhan_kimberly/inc_head_foot footer');
 
     function header() {
         $('.headerMenu').eq(localStorage.pageNum).addClass('active'); 
