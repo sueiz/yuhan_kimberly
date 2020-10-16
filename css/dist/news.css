@@ -1,0 +1,502 @@
+@import url("common.css");
+header {
+  width: 100%;
+  height: 75px;
+  background: transperant;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+header .header-wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-wrap:before {
+  content: "";
+  display: block;
+  opacity: 1;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  border-bottom: 1px solid #e1e1e1;
+}
+header .header-wrap .logo {
+  width: 10%;
+  margin-left: 15%;
+}
+header .header-wrap .logo a {
+  width: 100%;
+}
+header .header-wrap .logo a img {
+  width: 100%;
+  z-index: 10;
+}
+
+.header-wrap nav {
+  width: 40%;
+  height: 100%;
+  margin: 0 auto;
+}
+.header-wrap nav > .top_menu {
+  font-size: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+.header-wrap nav > .top_menu > li {
+  display: inline-block;
+  width: 25%;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  padding: 26px 0;
+}
+.header-wrap nav > .top_menu > li > a {
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+
+header .top_menu li:hover ul {
+  display: block;
+  width: 100%;
+  background: #04a6e1;
+  padding: 10% 0;
+}
+header .top_menu li > ul {
+  position: absolute;
+  left: 0;
+  top: 75px;
+  width: 100%;
+  text-align: left;
+  display: none;
+}
+header .top_menu li > ul > li {
+  padding: 0 10% 5% 10%;
+}
+header .top_menu li > ul > li > a {
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.header-wrap > .language {
+  width: 10%;
+  margin-right: 15%;
+}
+.header-wrap > .language > li {
+  position: relative;
+  width: 100%;
+}
+.header-wrap > .language > li:after {
+  content: "";
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-top: 7px solid #ababab;
+  border-bottom: 7px solid none;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.header-wrap > .language > li:hover .language_list {
+  display: block;
+}
+.header-wrap > .language > li > a {
+  font-size: 0.8em;
+  color: #333;
+  font-size: 0.7em;
+}
+.header-wrap > .language > li > .language_list {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  display: none;
+}
+.header-wrap > .language > li > .language_list > li {
+  display: inline-block;
+}
+.header-wrap > .language > li > .language_list > li > a {
+  text-align: center;
+  font-size: 0.7em;
+  color: #04a6e1;
+}
+
+main {
+  width: 100%;
+  background: url("../img/sub_bg.jpg") no-repeat;
+  margin: 4rem auto;
+}
+main h1 {
+  color: #333;
+  font-size: 3em;
+  text-align: center;
+  padding: 5rem 0 0 0;
+}
+
+main {
+  width: 100%;
+}
+main .ykhurb_wrap {
+  position: fixed;
+  right: 0;
+  bottom: -7%;
+  background: #04a6e1;
+  padding: 1vw 1.5vw;
+  transform: rotate(90deg);
+  transform-origin: 100% 0%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+main .ykhurb_wrap .title p {
+  margin: 0;
+  color: #fff;
+}
+main .ykhurb_wrap .title p mark {
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+}
+main .ykhurb_wrap .list_btn {
+  width: 0px;
+  height: 0px;
+  border-top: 7px solid #fff;
+  border-bottom: 7px solid none;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin-left: 3vw;
+}
+
+.news-wrap h2 {
+  font-size: 2em;
+  color: #000;
+  font-weight: 900;
+  margin-bottom: 2%;
+}
+
+.section03 article figure figcaption dl dt, .section03 article .title h3 mark, .section03 h3 mark, .meet02 > article .title h3 mark, .section02 .meet01 article .title h3 mark, .section02 h3 mark, .plant .section01 .make02 > article h3 mark, .plant .section01 .make01 h3 mark {
+  font-size: 1em;
+  background: transparent;
+  color: #04a6e1;
+  font-weight: 900;
+}
+
+.section03 article .title h3, .section03 h3, .meet02 > article .title h3, .section02 .meet01 article .title h3, .section02 h3, .plant .section01 .make02 > article h3, .plant .section01 .make01 h3, .news-wrap .newsTop a div h3 {
+  font-size: 1.5em;
+  margin-bottom: 5%;
+}
+
+.section03 article figure, .news-wrap .newsImg04 ul, .news-wrap .newsImg01 ul, .news-wrap .newsTop a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section03 article .title h3 p, .meet02 > article p, .meet02 > article .title h3 p, .section02 .meet01 article p, .section02 .meet01 article .title h3 p, .plant .section01 .make02 > article p, .news-wrap .newsTop a div p {
+  width: 100%;
+  color: #666;
+  font-weight: 200;
+}
+
+.news-wrap {
+  width: 70%;
+  margin: 5rem auto;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  background: #fff;
+  border-radius: 5px;
+}
+.news-wrap .newsTop {
+  width: 100%;
+}
+.news-wrap .newsTop a {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #e1e1e1;
+}
+.news-wrap .newsTop a img {
+  width: 50%;
+}
+.news-wrap .newsTop a div {
+  width: 50%;
+  text-align: right;
+  padding-right: 1rem;
+}
+.news-wrap .newsTop a div em {
+  font-size: 0.9em;
+}
+.news-wrap .newsSearch {
+  width: 100%;
+  margin: 3rem auto;
+  padding: 0;
+  background: #f9f9f9;
+  border: 1px solid #e1e1e1;
+}
+.news-wrap .newsSearch p {
+  display: inline-block;
+  font-size: 0.9em;
+  color: #666;
+}
+.news-wrap .newsSearch input[type=date] {
+  height: 30px;
+  outline: none;
+  font-size: 0.9em;
+  color: #666;
+  margin: 1rem;
+  border: 1px solid #e1e1e1;
+  padding: 1px 2px 1px 4px;
+}
+.news-wrap .newsSearch input[type=text] {
+  outline: none;
+  font-size: 0.9em;
+  color: #666;
+  width: 475px;
+  height: 30px;
+  border: 1px solid #e1e1e1;
+  padding: 1px 2px 1px 4px;
+  letter-spacing: -0.35px;
+  font-weight: 100;
+}
+.news-wrap .newsSearch input[type=submit] {
+  outline: none;
+  font-size: 0.9em;
+  color: #fff;
+  background: #04a6e1;
+  border: none;
+  padding: 4px 18px;
+}
+.news-wrap .newsImg01 {
+  width: 100%;
+  margin: 0 auto;
+}
+.news-wrap .newsImg01 ul {
+  margin: 0 auto;
+}
+.news-wrap .newsImg01 ul li {
+  display: inline-block;
+  width: 100%;
+  margin-right: 1rem;
+}
+.news-wrap .newsImg01 ul li:nth-of-type(3) {
+  margin-right: 0;
+}
+.news-wrap .newsImg01 ul li:hover {
+  border: 2px solid #04a6e1;
+  background: rgba(0, 0, 0, 0.5);
+}
+.news-wrap .newsImg01 ul li a {
+  position: relative;
+}
+.news-wrap .newsImg01 ul li a img {
+  width: 100%;
+}
+.news-wrap .newsImg01 ul li a span {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 20%;
+  transform: translateY(-20%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.news-wrap .newsImg01 ul li a span p {
+  margin: 0;
+}
+.news-wrap .newsImg01 ul li a span em {
+  margin: 0;
+  font-size: 0.9em;
+}
+.news-wrap .newsImg04 {
+  width: 100%;
+  margin: 5rem auto;
+}
+.news-wrap .newsImg04 ul {
+  margin: 0 auto;
+}
+.news-wrap .newsImg04 ul li {
+  display: inline-block;
+  width: 100%;
+  margin-right: 1rem;
+}
+.news-wrap .newsImg04 ul li:nth-of-type(4) {
+  margin-right: 0;
+}
+.news-wrap .newsImg04 ul li a {
+  width: 100%;
+}
+.news-wrap .newsImg04 ul li a img {
+  width: 100%;
+}
+.news-wrap .paging {
+  width: 100%;
+  text-align: center;
+}
+.news-wrap .paging a {
+  margin-right: 1rem;
+}
+
+.plant {
+  width: 100%;
+  margin: 5% auto;
+  position: relative;
+}
+.plant .section01 .make01 {
+  margin-bottom: 5%;
+}
+.plant .section01 .make01 div {
+  width: 70%;
+  margin: 0 auto;
+}
+.plant .section01 .make01 div img {
+  width: 100%;
+}
+.plant .section01 .make02 {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.plant .section01 .make02 > article {
+  margin: 0 auto;
+  width: 100%;
+  padding-right: 3%;
+}
+.plant .section01 .make02 > article:nth-of-type(2) {
+  padding-right: 0;
+  padding-left: 3%;
+}
+.plant .section01 .make02 > article h3 {
+  font-weight: 200;
+}
+.plant .section01 .make02 > article img {
+  width: 49%;
+}
+.meet02, .section02 .meet01 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section02 {
+  margin-bottom: 5%;
+}
+.section02 .meet01 article {
+  width: 100%;
+  padding-right: 3%;
+}
+.section02 .meet01 article:nth-of-type(2) {
+  padding-right: 0;
+  padding-left: 3%;
+}
+.section02 .meet01 article .title {
+  width: 100%;
+  position: relative;
+}
+.section02 .meet01 article .title h3 {
+  font-weight: 200;
+}
+.section02 .meet01 article .title h3 p {
+  margin: 0;
+}
+.section02 .meet01 article .title a {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border: 1px solid #ababab;
+  font-size: 0.7em;
+  padding: 10px 30px;
+}
+.section02 .meet01 article img {
+  width: 100%;
+}
+.meet02 {
+  width: 100%;
+  margin: 5% auto;
+}
+.meet02 > article {
+  width: 100%;
+  padding-right: 3%;
+}
+.meet02 > article:nth-of-type(3) {
+  padding-right: 0;
+}
+.meet02 > article .title {
+  width: 100%;
+  position: relative;
+}
+.meet02 > article .title h3 {
+  font-weight: 200;
+}
+.meet02 > article .title a {
+  float: right;
+  position: absolute;
+  right: 0%;
+  top: 60%;
+  border: 1px solid #ababab;
+  font-size: 0.7em;
+  padding: 10px 30px;
+}
+.meet02 > article img {
+  width: 100%;
+}
+.section03 {
+  margin-bottom: 5%;
+}
+.section03 article {
+  margin: 5% auto;
+}
+.section03 article .title h3 {
+  font-weight: 200;
+  margin-bottom: 3%;
+}
+.section03 article .title h3 p {
+  margin: 0;
+}
+.section03 article figure {
+  width: 100%;
+}
+.section03 article figure img {
+  width: 55%;
+}
+.section03 article figure figcaption {
+  width: 40%;
+}
+.section03 article figure figcaption dl dt dd {
+  color: #666;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #e1e1e1;
+}
+footer a {
+  width: 100%;
+}
+footer a img {
+  width: 10%;
+}
+footer ul li {
+  display: inline-block;
+  font-weight: lighter;
+  font-size: 0.8em;
+}
+footer ul li:after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 10px;
+  background: #ababab;
+  margin: 0 5px;
+}
+footer p {
+  font-weight: lighter;
+  font-size: 0.8em;
+}
