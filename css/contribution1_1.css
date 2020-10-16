@@ -27,7 +27,7 @@ header.active .header-wrap .logo a {
   display: block;
   width: 180px;
   height: 75px;
-  background: url(/img/yk_logo_normal.png) no-repeat center;
+  background: url("../img/yk_logo_normal.png") no-repeat center;
   background-size: contain;
 }
 
@@ -57,7 +57,7 @@ header.scrollDown .header-wrap .logo a {
   display: block;
   width: 180px;
   height: 75px;
-  background: url(/img/yk_logo_normal.png) no-repeat center;
+  background: url("../img/yk_logo_normal.png") no-repeat center;
   background-size: contain;
 }
 
@@ -94,7 +94,7 @@ header .header-wrap .logo a {
   display: block;
   width: 180px;
   height: 75px;
-  background: url(/img/yk_logo_white.png) no-repeat center;
+  background: url("../img/yk_logo_white.png") no-repeat center;
   background-size: contain;
 }
 

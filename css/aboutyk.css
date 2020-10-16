@@ -266,6 +266,7 @@ header .top_menu li > ul > li > a:hover {
   top: 50%;
   -webkit-transform: translate(-5%, -50%);
           transform: translate(-5%, -50%);
+  display: none;
 }
 
 .header-wrap .menu-trigger span {

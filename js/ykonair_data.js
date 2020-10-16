@@ -1,6 +1,6 @@
 $(function () {
     $.ajax({
-        url: '/ykonair_data.xml',
+        url: '../ykonair_data.xml',
         type: 'GET',
         success: function (ykonair_data) {
             console.log('성공');
