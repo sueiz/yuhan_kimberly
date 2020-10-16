@@ -29,7 +29,6 @@ window.addEventListener('DOMContentLoaded', function () {
             header.classList.add('scrollDown');
             header.style.display = 'fixed';
             header.addEventListener('mouseleave',function(){
-                logoImg.classList.add('active');
             })
         }else{
             //up
@@ -96,10 +95,8 @@ window.addEventListener('DOMContentLoaded', function () {
             sl.classList.add('active');
             if(idx!=0){
                 header.classList.add('scrollDown');
-                logoImg.classList.add('active');
             }else{
                 header.classList.remove('scrollDown');
-                logoImg.classList.remove('active');
             }
         });
     });
@@ -129,13 +126,11 @@ $(function() {
             $('.menu-trigger').on('click',function(){
                 if($('.menu-trigger').hasClass('active') == false){
                     $('header').addClass('active');
-                    $('.logo a').addClass('active');
                     $('.menu-trigger').addClass('active');
                     $('.header-wrap nav').css('display','block');
     
                 }else if($('.menu-trigger').hasClass('active') == true){
                     $('header').removeClass('active');
-                    $('.logo a').removeClass('active');
                     $('.menu-trigger').removeClass('active');
                     $('.header-wrap nav').css('display','none');
                 }
@@ -149,13 +144,11 @@ $(function() {
             console.log('pc');
             $('header').on('mouseover',function(){
                 $('header').addClass('active');
-                $('.logo a').addClass('active');
                 $('.sub_menu').show();
             });
         
             $('header').on('mouseleave',function(){
                 $('header').removeClass('active');
-                $('.logo a').removeClass('active');
                 $('.sub_menu').hide();
             });
         }
@@ -216,6 +209,5 @@ $(function() {
             $('.arrow-down').attr("disabled","disabled");
         }
     });
-
 });
 
