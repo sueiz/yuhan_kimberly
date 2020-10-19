@@ -1,5 +1,6 @@
 @import url("common_index.css");
-html, body {
+html,
+body {
   overflow: hidden;
 }
 
@@ -409,6 +410,7 @@ main .side_menu ul li span.active {
   opacity: 1;
 }
 
+/* YK hurb */
 main {
   width: 100%;
 }
@@ -675,17 +677,19 @@ main .ykhurb_wrap .list_btn {
   width: 70%;
   height: 100%;
   margin: 0 auto;
-  overflow: hidden;
-}
-
-.section01 .historyWrap .yk_history {
-  width: 100%;
-  margin: 1rem auto 0;
   position: relative;
 }
 
-.section01 .historyWrap .yk_history figure {
-  margin: 0 auto;
+.section01 .historyWrap .slide {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.section01 .historyWrap .slide ul li figure {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -696,50 +700,42 @@ main .ykhurb_wrap .list_btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  left: 0;
-  -webkit-transform: translateY(70%);
-          transform: translateY(70%);
 }
 
-.section01 .historyWrap .yk_history figure:nth-of-type(1) {
-  left: 0%;
+.section01 .historyWrap .slide ul li figure.active img,
+.section01 .historyWrap .slide ul li figure.active figcaption {
+  opacity: 1;
 }
 
-.section01 .historyWrap .yk_history figure:nth-of-type(2) {
-  left: 100%;
-}
-
-.section01 .historyWrap .yk_history figure:nth-of-type(3) {
-  left: 200%;
-}
-
-.section01 .historyWrap .yk_history figure:nth-of-type(4) {
-  left: 300%;
-}
-
-.section01 .historyWrap .yk_history figure img {
-  width: 50%;
+.section01 .historyWrap .slide ul li figure img {
+  width: 60%;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-.section01 .historyWrap .yk_history figure figcaption {
-  width: 45%;
+.section01 .historyWrap .slide ul li figure figcaption {
+  width: 35%;
+  text-align: center;
+  opacity: 1;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-.section01 .historyWrap .yk_history figure figcaption strong {
+.section01 .historyWrap .slide ul li figure figcaption strong {
   font-size: 4rem;
   font-weight: 900;
 }
 
-.section01 .historyWrap .yk_history figure figcaption span {
+.section01 .historyWrap .slide ul li figure figcaption span {
   display: block;
   font-size: 2em;
   font-weight: 900;
 }
 
-.section01 .historyWrap .yk_history figure figcaption p {
+.section01 .historyWrap .slide ul li figure figcaption p {
   color: #ababab;
 }
 
@@ -782,8 +778,7 @@ main .ykhurb_wrap .list_btn {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: url("../img/section2.jpg") no-repeat center;
-  background-size: contain;
+  background: url("../img/section02_bg.jpg") no-repeat center;
 }
 
 .section02 .product-wrap {

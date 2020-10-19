@@ -10,11 +10,14 @@
     }
 }
 
-html,body{
-    overflow:hidden;
+html,
+body {
+    overflow: hidden;
 }
 
-html {scroll-behavior:smooth;}
+html {
+    scroll-behavior: smooth;
+}
 
 /* header logo */
 header {
@@ -37,7 +40,7 @@ header {
         .language>li>a {
             color: #333;
         }
-        
+
         .header-wrap {
             .logo {
                 a {
@@ -129,12 +132,12 @@ header {
         height: 100%;
         margin: 0 auto;
 
-        > .top_menu {
+        >.top_menu {
             font-size: 0;
             width: 100%;
             margin: 0 auto;
 
-            > li {
+            >li {
                 display: inline-block;
                 width: 25%;
                 box-sizing: border-box;
@@ -160,7 +163,7 @@ header {
                     left: 0;
                 }
 
-                > a {
+                >a {
                     color: #fff;
                     font-weight: 400;
                     text-align: center;
@@ -183,18 +186,18 @@ header {
                 width: 100%;
             }
 
-            > ul {
+            >ul {
                 position: absolute;
                 left: 0;
                 top: 75px;
                 width: 100%;
                 display: none;
 
-                > li {
+                >li {
                     padding: 0 10% 5% 10%;
                     text-align: center;
 
-                    > a {
+                    >a {
                         font-size: .9em;
                         color: #888;
 
@@ -376,6 +379,7 @@ main {
                         0% {
                             color: #063;
                         }
+
                         100% {
                             color: #d97234;
                         }
@@ -411,7 +415,7 @@ main {
     }
 }
 
-// 유한킴벌리 hub
+/* YK hurb */
 
 main {
     width: 100%;
@@ -682,54 +686,66 @@ main {
         width: 70%;
         height: 100%;
         margin: 0 auto;
-        overflow: hidden;
+        position: relative;
 
-        .yk_history {
+        .slide {
             width: 100%;
-            margin: 1rem auto 0;
-            position: relative;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
 
-            figure {
-                margin: 0 auto;
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                position: absolute;
-                left: 0;
-                transform: translateY(70%);
+            ul {
 
-                @for $i from 1 through 4 {
-                    &:nth-of-type(#{$i}) {
-                        left: ((100%*$i)-100%);
-                    }
-                }
+                li {
 
-                img {
-                    width: 50%;
-                    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-                }
+                    figure {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
 
-                figcaption {
-                    width: 45%;
+                        &.active {
 
-                    strong {
-                        font-size: 4rem;
-                        font-weight: 900;
-                    }
+                            img,
+                            figcaption {
+                                opacity: 1;
+                            }
+                        }
 
-                    span {
-                        display: block;
-                        font-size: 2em;
-                        font-weight: 900;
-                    }
+                        img {
+                            width: 60%;
+                            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+                            opacity: 1;
+                            transition: .5s;
+                        }
 
-                    p {
-                        color: #ababab;
+                        figcaption {
+                            width: 35%;
+                            text-align: center;
+                            opacity: 1;
+                            transition: .5s;
+
+                            strong {
+                                font-size: 4rem;
+                                font-weight: 900;
+                            }
+
+                            span {
+                                display: block;
+                                font-size: 2em;
+                                font-weight: 900;
+                            }
+
+                            p {
+                                color: #ababab;
+                            }
+                        }
                     }
                 }
             }
         }
+
     }
 }
 
@@ -775,8 +791,8 @@ main {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: url('../img/section2.jpg') no-repeat center;
-    background-size: contain;
+    background: url('../img/section02_bg.jpg') no-repeat center;
+    // background-size: contain;
 
     .product-wrap {
         width: 100%;
@@ -877,6 +893,7 @@ main {
                                     0% {
                                         transform: translateY(-100%);
                                     }
+
                                     100% {
                                         transform: translateY(-200%);
                                     }

@@ -155,59 +155,60 @@ $(function() {
     }
     nav();
 
-    /* 유한킴벌리 HUB */
-    $('.ykhurb_wrap2').hide();
-    $('.ykhurb_wrap').on('mouseover',function(){
-        $('.ykhurb_wrap2').show();
-        $('.ykhurb_wrap').css({
-            right:'20rem'
-        })
+
+    /* SLIDE */
+    $(".slide ul").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000
     });
 
-    $('.ykhurb_wrap2').on('mouseleave',function(){
-        $('.ykhurb_wrap2').hide();
-        $('.ykhurb_wrap').css({
-            right:'0'
-        })
+    $('.bn').eq(1).find('figure').addClass('active');
+    $('.slide ul').on('beforeChange',function(event, slick, currentSlide, nextSlide){
+        $('.bn figure').removeClass('active');
+    });
+    
+    $('.slide ul').on('afterChange',function(event, slick, currentSlide){
+        $('.bn').eq(currentSlide+1).find('figure').addClass('active');
     });
 
-    $('.ykhurb_wrap2 .title a').on('click',function(){
-        $('.ykhurb_wrap2').hide();
-        $('.ykhurb_wrap').css({
-            right:'0'
-        })
-    });
 
-    // section 01 history
-    var idx = 0;
 
-    $('.arrow-up').on('click',function(){
+   
+
+    // // section 01 history
+    // var idx = 0;
+
+    // $('.arrow-up').on('click',function(){
 
         
-        $('.yk_history figure').eq(idx).css('left','-100%');
-        idx ++;
-        $('.yk_history figure').eq(idx).css({
-            left: '0%',
-            transition: '.5s'
-        });
+    //     $('.yk_history figure').eq(idx).css('left','-100%');
+    //     idx ++;
+    //     $('.yk_history figure').eq(idx).css({
+    //         left: '0%',
+    //         transition: '.5s'
+    //     });
 
-        if(idx == $('.yk_history figure').length-1){
-            $(".arrow-up").off('click');
+    //     if(idx == $('.yk_history figure').length-1){
+    //         $(".arrow-up").off('click');
  
-        }
-    });
+    //     }
+    // });
 
-    $('.arrow-down').on('click',function(){
-        $('.yk_history figure').eq(idx).css('left','100%');
-        idx --;
-        $('.yk_history figure').eq(idx).css({
-            left: '-0%',
-            transition: '.5s'
-        });
+    // $('.arrow-down').on('click',function(){
+    //     $('.yk_history figure').eq(idx).css('left','100%');
+    //     idx --;
+    //     $('.yk_history figure').eq(idx).css({
+    //         left: '-0%',
+    //         transition: '.5s'
+    //     });
 
-        if(idx == 0){
-            $('.arrow-down').attr("disabled","disabled");
-        }
-    });
+    //     if(idx == 0){
+    //         $('.arrow-down').attr("disabled","disabled");
+    //     }
+    // });
 });
 

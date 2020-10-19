@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/icon.png">
     <title>유한킴벌리</title>
-    <link rel="stylesheet" type="text/css" href="/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick.css">
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="css/index_mediaquery.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="slick.js"></script>
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
 </head>
@@ -23,57 +25,6 @@
     </header>
 
     <main>
-        <div class="ykhurb_wrap">
-            <div class="btn_wrap">
-                <p>유한킴벌리 <mark>HUB</mark></p>
-                <div class="list_btn">
-                </div>
-            </div>
-
-        </div>
-        <div class="ykhurb_wrap2">
-            <div class="ykhurb">
-                <div class="title">
-                    <h2>유한킴벌리 <mark>HUB</mark></h2>
-                    <a href="#"><img src="img/x.png" alt="close"></a>
-                </div>
-                <ul>
-                    <li class="mall">
-                        <a href="#">
-                            <img src="img/ykHurb_img01.jpg" alt="ykhurb">
-                            <strong>Shopping Mall<p>유한킴벌리 제품을<br>구매할 수 있습니다.</p></strong>
-                        </a>
-                    </li>
-                    <li class="azamall">
-                        <a href="#">
-                            <img src="img/ykHurb_img02.jpg" alt="ykhurb">
-                            <strong>AZA Mall<p>믿을 수 있는 상품을<br>제안하고 판매하는<br> 인터넷 종합 쇼핑몰입니다.</p></strong>
-
-                        </a>
-                    </li>
-                    <li class="ch_yk">
-                        <a href="#">
-                            <img src="img/ykHurb_img03.jpg" alt="ykhurb">
-                            <strong>Ch.유한킴벌리<p>각종 영상, 제품, <br>뉴스 컨텐츠들을 제공합니다.</p></strong>
-
-                        </a>
-                    </li>
-                    <!-- <li class="yk_ticket">
-                        <a href="#">
-                            <img src="/img/ykHurb_img04.png" alt="ykhurb">
-                            <strong>YK Ticket<p>유한킴벌리의 모든 것을
-                                    <br>한눈에 확인하고<br> 알람을 받을 수 있습니다.</p></strong>
-
-                        </a>
-                    </li> -->
-                    <li class="yk_sns">
-                        <a href="#"><span></span></a>
-                        <a href="#"><span></span></a>
-                        <a href="#"><span></span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
         <div class="side_menu">
             <ul>
                 <li><a class="eng-title" href="#">Main<span></span></a></li>
@@ -86,61 +37,62 @@
 
         <div class="section-wrap">
             <div class="imgWrap">
-            <div class="main_img" name="section">
-                <video loop autoplay muted>
-                    <source src="video/yk_tvc.mp4" type="video/mp4">
-                </video>
-            </div></div>
+                <div class="main_img" name="section">
+                    <video loop autoplay muted>
+                        <source src="video/yk_tvc.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
 
             <!--MAIN SECTION 01: HISTORY-->
             <article class="section01" name="section">
-            <article class="historyWrap">
-                <div class="yk_history">
-                    <figure class="history01">
-                        <img src="img/main_section_01.jpg" alt="history">
-                        <figcaption>
-                            <strong class="eng-title">1.3 billion</strong>
-                            <span class="eng-title">Global Sales</span>
-                            <p>2019년 글로벌 매출 1조 5천원 억을 달성하였습니다.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="history02">
-                        <img src="img/main_section_02.jpg" alt="history">
-                        <figcaption>
-                            <strong class="eng-title">1.3 billion</strong>
-                            <span class="eng-title">Global Sales</span>>
-                            <p>2019년 글로벌 매출 1조 5천원 억을 달성하였습니다.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="history03">
-                        <img src="img/main_section_03.jpg" alt="history">
-                        <figcaption>
-                            <strong class="eng-title">1.3 billion</strong>
-                            <span class="eng-title">Global Sales</span>
-                            <p>2019년 글로벌 매출 1조 5천원 억을 달성하였습니다.</p>
-                        </figcaption>
-                    </figure>
-                    <figure class="history04">
-                        <img src="img/main_section_04.jpg" alt="history">
-                        <figcaption>
-                            <strong class="eng-title">1.3 billion</strong>
-                            <span class="eng-title">Global Sales</span>
-                            <p>2019년 글로벌 매출 1조 5천원 억을 달성하였습니다.</p>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div class="arrow_btn">
-                    <button class="arrow-up">
-                        <img src="img/arrow-up.png" alt="arrow-up">
-                    </button>
-                    <p><mark>1</mark> / 4</p>
-                    <button class="arrow-down">
-                        <img src="img/arrow-down.png" alt="arrow-down">
-                    </button>
-                </div>
+                <article class="historyWrap">
+                    <div class="slide s_v1">
+                        <ul>
+                            <li class="bn">
+                                <figure>
+                                    <img src="img/main_section_01.jpg" alt="history">
+                                    <figcaption>
+                                        <strong class="eng-title">1.3 billion</strong>
+                                        <span class="eng-title">Global Sales</span>
+                                        <p>2019년 글로벌 매출 1조 5천원 억을 달성하였습니다.</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="bn">
+                                <figure>
+                                    <img src="img/main_section_02.jpg" alt="history">
+                                    <figcaption>
+                                        <strong class="eng-title">1.3 billion</strong>
+                                        <span class="eng-title">Global Sales</span>
+                                        <p>2019년 글로벌 매출 1조 5천원 억을 달성하였습니다.</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="bn">
+                                <figure>
+                                    <img src="img/main_section_03.jpg" alt="history">
+                                    <figcaption>
+                                        <strong class="eng-title">1.3 billion</strong>
+                                        <span class="eng-title">Global Sales</span>
+                                        <p>2019년 글로벌 매출 1조 5천원 억을 달성하였습니다.</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="bn">
+                                <figure>
+                                    <img src="img/main_section_04.jpg" alt="history">
+                                    <figcaption>
+                                        <strong class="eng-title">1.3 billion</strong>
+                                        <span class="eng-title">Global Sales</span>
+                                        <p>2019년 글로벌 매출 1조 5천원 억을 달성하였습니다.</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
             </article>
-        </article>
 
             <!--MAIN SECTION 02: PRODUCT-->
             <article class="section02" name="section">
@@ -222,7 +174,9 @@
                                 <a href="#">
                                     <figure>
                                         <img src="img/section04_01.jpg" alt="news">
-                                        <figcaption><p>유한킴벌리 레드투래드 미스트, ‘화해’ 설문단 만족도 95%</p></figcaption>
+                                        <figcaption>
+                                            <p>유한킴벌리 레드투래드 미스트, ‘화해’ 설문단 만족도 95%</p>
+                                        </figcaption>
                                     </figure>
                                 </a>>
                             </li>
@@ -230,8 +184,10 @@
                                 <a href="#">
                                     <figure>
                                         <img src="img/section04_02.jpg" alt="news">
-                                        <figcaption><p>유한킴벌리의 뚜벅이 기부,
-                                            하기스 ‘이른둥이’용 기저귀 무상지원 15,000명 넘어서</p></figcaption>
+                                        <figcaption>
+                                            <p>유한킴벌리의 뚜벅이 기부,
+                                                하기스 ‘이른둥이’용 기저귀 무상지원 15,000명 넘어서</p>
+                                        </figcaption>
                                     </figure>
                                 </a>>
                             </li>
@@ -239,8 +195,10 @@
                                 <a href="#">
                                     <figure>
                                         <img src="img/section04_03.jpg" alt="news">
-                                        <figcaption><p>유한킴벌리의 뚜벅이 기부,
-                                            하기스 ‘이른둥이’용 기저귀 무상지원 15,000명 넘어서</p></figcaption>
+                                        <figcaption>
+                                            <p>유한킴벌리의 뚜벅이 기부,
+                                                하기스 ‘이른둥이’용 기저귀 무상지원 15,000명 넘어서</p>
+                                        </figcaption>
                                     </figure>
                                 </a>>
                             </li>
@@ -248,7 +206,9 @@
                                 <a href="#">
                                     <figure>
                                         <img src="img/section04_04.jpg" alt="news">
-                                        <figcaption><p>유한킴벌리 최규복 사장, 화훼농가 돕기 릴레이 캠페인 동참</p></figcaption>
+                                        <figcaption>
+                                            <p>유한킴벌리 최규복 사장, 화훼농가 돕기 릴레이 캠페인 동참</p>
+                                        </figcaption>
                                     </figure>
                                 </a>>
                             </li>

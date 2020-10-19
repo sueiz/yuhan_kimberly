@@ -320,17 +320,18 @@ header {
 
 /* ---------------------------------------------------- header END */
 
+/* YK hurb */
 
-// 유한킴벌리 hub
 main {
     width: 100%;
 
     .ykhurb_wrap {
         position: fixed;
         right: 0;
-        bottom: -7%;
-        background: #04a6e1;
-        padding: 1vw 1.5vw;
+        bottom: -8%;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #e1e1e1;
+        padding: 1.5rem 3.5rem 1.5rem 3rem;
         transform: rotate(90deg);
         transform-origin: 100% 0%;
         display: flex;
@@ -338,15 +339,38 @@ main {
         align-items: center;
         z-index: 10;
 
-        .title {
+        .btn_wrap {
             p {
                 margin: 0;
-                color: #fff;
+                color: #063;
+                font-weight: 100;
+                animation: hub-font-animations .5s .3s infinite both alternate;
+
+                @keyframes hub-font-animations {
+                    0% {
+                        color: #063;
+                    }
+
+                    100% {
+                        color: #d97234;
+                    }
+                }
 
                 mark {
                     background: transparent;
-                    color: #fff;
-                    font-weight: bold;
+                    color: #d97234;
+                    font-weight: 900;
+                    animation: hub-font-animations2 .5s .3s infinite both alternate;
+                }
+
+                @keyframes hub-font-animations2 {
+                    0% {
+                        color: #d97234;
+                    }
+
+                    100% {
+                        color: #063;
+                    }
                 }
             }
         }
@@ -358,10 +382,181 @@ main {
             border-bottom: 7px solid none;
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
-            margin-left: 3vw;
+            position: absolute;
+            right: 15%;
+            top: 50%;
+            transform: translate(-15%, -50%);
         }
     }
 }
+
+
+main {
+    .ykhurb_wrap2 {
+        width: 20rem;
+        height: 100vh;
+        padding: 0;
+        background: #f7f8fa;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 100;
+        transition: .5s;
+
+        .ykhurb {
+            padding: 1em;
+
+            .title {
+                overflow: hidden;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    border-bottom: 1px solid #e1e1e1;
+                    margin-top: 1.2rem;
+                }
+
+                h2 {
+                    font-size: 1.5em;
+                    font-weight: 900;
+                    margin: 0;
+
+                    mark {
+                        background: transparent;
+                        font-weight: 900;
+                        font-size: 1.1em;
+                    }
+                }
+
+                a {
+                    float: right;
+                    transform: translateY(-150%);
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            %hub_strong {
+                position: absolute;
+                left: 1rem;
+                top: 1rem;
+            }
+
+            %hub_p {
+                font-size: .9em;
+                font-weight: 100;
+            }
+
+            ul {
+                width: 100%;
+                font-size: 0;
+                padding-inline-start: 0px;
+
+                li {
+                    width: 100%;
+                    position: relative;
+                    margin: 1rem 0;
+                }
+
+                .mall {
+                    img {
+                        width: 100%;
+                    }
+
+                    strong {
+                        @extend %hub_strong;
+                        color: #fff;
+                    }
+
+                    p {
+                        @extend %hub_p;
+                    }
+                }
+
+                .azamall {
+                    img {
+                        width: 100%;
+                    }
+
+                    strong {
+                        @extend %hub_strong;
+                        color: #333;
+                    }
+
+                    p {
+                        @extend %hub_p;
+                    }
+                }
+
+                .ch_yk {
+                    img {
+                        width: 100%;
+                    }
+
+                    strong {
+                        @extend %hub_strong;
+                        color: #333;
+                    }
+
+                    p {
+                        @extend %hub_p;
+                    }
+                }
+
+                .yk_ticket {
+                    img {
+                        width: 100%;
+                    }
+
+                    strong {
+                        @extend %hub_strong;
+                        color: #333;
+                    }
+
+                    p {
+                        @extend %hub_p;
+                    }
+                }
+
+                .yk_sns {
+                    a {
+                        font-size: 0;
+                        width: 90px;
+                        height: 90px;
+                        display: inline-block;
+                        padding: 1.5rem 0.5rem;
+                        border-radius: 50%;
+                        background: #fff;
+                        margin-right: .2rem;
+
+                        &:nth-of-type(3) {
+                            margin-right: 0;
+                        }
+
+                        &:nth-of-type(2) span {
+                            background-position: -4.2rem 0;
+                        }
+
+                        &:nth-of-type(3) span {
+                            background-position: -8.6rem 0;
+                        }
+
+                        span {
+                            background: url('../img/ykHurb_snsicon.png') no-repeat;
+                            display: block;
+                            width: 5rem;
+                            height: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 // MAIN
 
