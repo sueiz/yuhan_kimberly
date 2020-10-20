@@ -1029,6 +1029,7 @@ main .ykhurb_wrap .list_btn {
 footer {
   width: 100%;
   text-align: center;
+  z-index: 99;
 }
 
 footer a {

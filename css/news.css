@@ -567,15 +567,15 @@ main .ykhurb_wrap2 .ykhurb ul .yk_sns a span {
 
 .news-wrap .news h2 {
   font-size: 2em;
-  color: #000;
+  color: #d97234;
   font-weight: 900;
   margin-bottom: 2%;
 }
 
 .plant .section01 .make01 h3 mark, .plant .section01 .make02 > article h3 mark, .section02 h3 mark, .section02 .meet01 article .title h3 mark, .meet02 > article .title h3 mark, .section03 h3 mark, .section03 article .title h3 mark, .section03 article figure figcaption dl dt {
-  font-size: 1em;
+  font-size: 1.5em;
   background: transparent;
-  color: #04a6e1;
+  color: #063;
   font-weight: 900;
 }
 
