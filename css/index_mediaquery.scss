@@ -19,6 +19,11 @@
 /* 1024px 이하 */
 @media (max-width: 1024px) {
 
+    html,
+    body {
+    overflow: visible;
+    }
+
     /* logo */
     header {
         width: 100%;
@@ -105,7 +110,6 @@
     .header-wrap {
         nav {
             width: 100%;
-            // height: 0;
             margin: 0 auto;
             position: fixed;
             top: 75px;
@@ -263,7 +267,6 @@
     /* side_meny, yk_hurb 숨기기 */
 
     main {
-
         .side_menu,
         .ykhurb_wrap,
         .ykhurb_wrap2 {
@@ -271,13 +274,12 @@
         }
     }
 
-
     /* VIDEO */
 
     .imgWrap {
         width: 100%;
-        height: 100vh;
-        overflow: hidden;
+        height: 100%;
+        overflow: visible;
 
         .main_img {
             position: relative;
@@ -295,101 +297,72 @@
     .section01 {
         width: 100%;
         height: 100vh;
-
+        background: linear-gradient(360deg, #e1e1e1 50%, #fff 50%);
+    
         .historyWrap {
-            width: 70%;
+            width: 100%;
+            height: 100%;
             margin: 0 auto;
-            overflow: hidden;
-
-            .yk_history {
+            position: relative;
+    
+            .slide {
                 width: 100%;
-                height: 100%;
-                margin: 0 auto;
-                position: relative;
-
-                figure {
-                    margin: 0 auto;
-                    width: 100%;
-                    height: 100%;
-                    /*
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                */
-                    display: block;
-                    position: position;
-                    left: 50%;
-                    top: 10%;
-                    transform: translateY(0%);
-
-                    @for $i from 1 through 4 {
-                        &:nth-of-type(#{$i}) {
-                            left: ((100%*$i)-100%);
-                        }
-                    }
-
-                    img {
-                        width: 100%;
-                        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-                    }
-
-                    figcaption {
-                        width: 100%;
-                        text-align: center;
-
-                        strong {
-                            font-size: 4em;
-                            font-weight: 900;
-                        }
-
-                        span {
-                            display: block;
-                            font-size: 2em;
-                            font-weight: 900;
-                        }
-
-                        p {
-                            color: #ababab;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+    
+                ul {
+    
+                    li {
+    
+                        figure {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+    
+                            &.active {
+    
+                                img,
+                                figcaption {
+                                    opacity: 1;
+                                }
+                            }
+    
+                            img {
+                                width: 55%;
+                                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+                                opacity: 1;
+                                transition: .5s;
+                            }
+    
+                            figcaption {
+                                width: 45%;
+                                text-align: center;
+                                opacity: 1;
+                                transition: .5s;
+    
+                                strong {
+                                    font-size: 3.5rem;
+                                    font-weight: 900;
+                                }
+    
+                                span {
+                                    display: block;
+                                    font-size: 2em;
+                                    font-weight: 900;
+                                }
+    
+                                p {
+                                    color: #ababab;
+                                }
+                            }
                         }
                     }
                 }
             }
-        }
-    }
-
-    .historyWrap {
-        .arrow_btn {
-            position: absolute;
-            right: 15%;
-            top: 28%;
-            transform: translate(-15%, -28%);
-
-            button {
-                border: 1px solid #ababab;
-                background-color: transparent;
-                width: 2.5rem;
-                height: 2.5rem;
-                border-radius: 2.5rem;
-                padding: 5px;
-                outline: none;
-
-                &:hover {
-                    background-color: #04a6e1;
-                }
-
-                img {
-                    width: 50%;
-                }
-            }
-
-            p {
-                color: #ababab;
-
-                mark {
-                    background-color: transparent;
-                    color: #333;
-                }
-            }
+    
         }
     }
 
@@ -399,7 +372,7 @@
         width: 100%;
         height: 100vh;
         overflow: hidden;
-        background: url('../img/section2.jpg') no-repeat center;
+        background: url('../img/section02_bg.jpg') no-repeat center;
         background-size: contain;
 
         .product-wrap {
@@ -407,7 +380,7 @@
             margin: 5rem auto 0;
 
             .text_02 {
-                width: 70%;
+                width: 90%;
                 margin: 15rem auto;
 
                 h2 {
@@ -442,9 +415,9 @@
         background: url('../img/mainbg2.jpg') no-repeat;
 
         .csr-wrap {
-            width: 80%;
+            width: 100%;
             margin: 0rem auto 0;
-            padding: 7rem 0;
+            padding: 2rem 0;
 
             .title_03 {
                 margin: 0 auto;
@@ -565,15 +538,15 @@
         overflow: hidden;
 
         .news-wrap {
-            width: 80%;
+            width: 100%;
             margin: 0rem auto;
-            padding: 3rem 0;
+            padding: 5rem 0;
 
             .news {
                 width: 100%;
 
                 .news_top {
-                    margin: 100px auto;
+                    margin: 0 auto;
 
                     img {
                         width: 45%;
@@ -678,7 +651,7 @@
 
     html,
     body {
-        overflow: hidden;
+        overflow: visible;
     }
 
     html {
@@ -711,57 +684,118 @@
     }
 
     .section04 {
+        width: 100%;
+        position: relative;
+        height: 100vh;
+        background: url("../img/section04_img.jpg") center no-repeat;
+        overflow: hidden;
+
         .news-wrap {
             width: 100%;
+            margin: 0rem auto;
+            padding: 5rem 0;
 
             .news {
+                width: 100%;
+
                 .news_top {
-                    margin: 5rem auto;
+                    margin: 0 auto;
 
                     img {
-                        display: block;
-                        width: 100%;
-                        float: none;
+                        width: 45%;
+                        float: left;
                     }
 
                     div {
-                        width: 100%;
-                        float: none;
+                        width: 50%;
+                        float: right;
                         color: #fff;
-                        margin: 0 auto;
 
                         h2 {
                             font-size: 3em;
                             margin-bottom: 3%;
-                            text-align: center;
 
                             &:before {
                                 content: '';
                                 display: block;
-                                width: 100%;
+                                width: 10%;
                                 border: 2px solid #04a6e1;
                             }
                         }
 
                         strong {
-                            display: none;
+                            font-size: 1em;
+                            margin-bottom: 3%;
                         }
 
                         p {
-                            display: none;
+                            font-size: .9em;
                         }
                     }
                 }
+
                 .news_body {
                     width: 100%;
+
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
-                    display: none;
+
+                    li {
+                        display: inline-block;
+                        margin: 2% auto;
+                        width: 25%;
+                        margin-right: 2%;
+
+                        &:nth-of-type(4) {
+                            margin-right: 0;
+                        }
+
+                        a {
+                            figure {
+                                width: 100%;
+                                position: relative;
+                                overflow: hidden;
+
+                                &:hover figcaption {
+                                    opacity: 1;
+                                }
+
+                                &:hover img {
+                                    transform: scale(1.1);
+                                }
+
+                                img {
+                                    width: 100%;
+                                    transition: .5s;
+                                }
+
+                                figcaption {
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0%;
+                                    // transform: translateY(-50%);
+                                    text-align: center;
+                                    opacity: 0;
+                                    transition: .5s;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: rgba(0, 0, 0, 0.5);
+                                    color: #fff;
+
+                                    p {
+                                        position: absolute;
+                                        left: 50%;
+                                        top: 50%;
+                                        transform: translate(-50%, -50%);
+                                        width: 90%;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
-
-
         }
     }
 }

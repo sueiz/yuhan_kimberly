@@ -21,7 +21,7 @@ header {
         .language>li>a {
             color: #333;
         }
-        
+
         .header-wrap {
             .logo {
                 a {
@@ -113,12 +113,12 @@ header {
         height: 100%;
         margin: 0 auto;
 
-        > .top_menu {
+        >.top_menu {
             font-size: 0;
             width: 100%;
             margin: 0 auto;
 
-            > li {
+            >li {
                 display: inline-block;
                 width: 25%;
                 box-sizing: border-box;
@@ -144,7 +144,7 @@ header {
                     left: 0;
                 }
 
-                > a {
+                >a {
                     color: #fff;
                     font-weight: 400;
                     text-align: center;
@@ -167,18 +167,18 @@ header {
                 width: 100%;
             }
 
-            > ul {
+            >ul {
                 position: absolute;
                 left: 0;
                 top: 75px;
                 width: 100%;
                 display: none;
 
-                > li {
+                >li {
                     padding: 0 10% 5% 10%;
                     text-align: center;
 
-                    > a {
+                    >a {
                         font-size: .9em;
                         color: #888;
 
@@ -294,33 +294,43 @@ footer {
     width: 100%;
     text-align: center;
 
-    a {
-        width: 100%;
+    > div {
+        border-top: 1px solid #e1e1e1;
+        padding-top: 1rem;
 
-        img {
-            width: 10%;
-        }
-    }
+        a {
+            width: 100%;
 
-    ul {
-        li {
-            display: inline-block;
-            font-weight: lighter;
-            font-size: .8em;
+            div {
+                width: 10%;
+                margin: 0 auto;
 
-            &:after {
-                content: '';
-                display: inline-block;
-                width: 2px;
-                height: 10px;
-                background: #ababab;
-                margin: 0 5px;
+                img {
+                    width: 100%;
+                }
             }
         }
-    }
 
-    p {
-        font-weight: lighter;
-        font-size: .8em;
+        ul {
+            li {
+                display: inline-block;
+                font-weight: lighter;
+                font-size: .8em;
+
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    width: 2px;
+                    height: 10px;
+                    background: #ababab;
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        p {
+            font-weight: lighter;
+            font-size: .8em;
+        }
     }
 }

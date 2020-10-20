@@ -96,15 +96,6 @@ header {
         justify-content: space-between;
         align-items: center;
 
-        &:before {
-            content: '';
-            display: block;
-            opacity: 0;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-        }
-
         .logo {
             width: 10%;
             margin-left: 15%;
@@ -746,42 +737,6 @@ main {
             }
         }
 
-    }
-}
-
-.historyWrap {
-    .arrow_btn {
-        position: absolute;
-        right: 15%;
-        top: 28%;
-        transform: translate(-15%, -28%);
-
-        button {
-            border: 1px solid #ababab;
-            background-color: transparent;
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 2.5rem;
-            padding: 5px;
-            outline: none;
-
-            &:hover {
-                background-color: #04a6e1;
-            }
-
-            img {
-                width: 50%;
-            }
-        }
-
-        p {
-            color: #ababab;
-
-            mark {
-                background-color: transparent;
-                color: #333;
-            }
-        }
     }
 }
 

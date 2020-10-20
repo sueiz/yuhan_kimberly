@@ -78,15 +78,6 @@ header {
         justify-content: space-between;
         align-items: center;
 
-        &:before {
-            content: '';
-            display: block;
-            opacity: 0;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-        }
-
         .logo {
             width: 10%;
             margin-left: 15%;
@@ -558,12 +549,11 @@ main {
     }
 }
 
-
 // SECTION 01: 미션 및 비전
 
 %h2 {
     font-size: 2em;
-    color: #333;
+    color: #d97234;
     font-weight: 900;
     margin-bottom: 2%;
 }
@@ -576,7 +566,7 @@ main {
 %mark {
     font-size: 1.5em;
     background: transparent;
-    color: #04a6e1;
+    color: #063;
     font-weight: 900;
 }
 
@@ -712,11 +702,11 @@ main {
                     width: 50%;
                     margin: 5% auto;
                     padding: 10px;
-                    background: #04a6e1;
                     text-align: center;
+                    border: 1px solid #e1e1e1;
 
                     a {
-                        color: #fff;
+                        color: #d97234;
                     }
                 }
             }
@@ -729,33 +719,43 @@ footer {
     width: 100%;
     text-align: center;
 
-    a {
-        width: 100%;
+    > div {
+        border-top: 1px solid #e1e1e1;
+        padding-top: 1rem;
 
-        img {
-            width: 10%;
-        }
-    }
+        a {
+            width: 100%;
 
-    ul {
-        li {
-            display: inline-block;
-            font-weight: lighter;
-            font-size: .8em;
+            div {
+                width: 10%;
+                margin: 0 auto;
 
-            &:after {
-                content: '';
-                display: inline-block;
-                width: 2px;
-                height: 10px;
-                background: #ababab;
-                margin: 0 5px;
+                img {
+                    width: 100%;
+                }
             }
         }
-    }
 
-    p {
-        font-weight: lighter;
-        font-size: .8em;
+        ul {
+            li {
+                display: inline-block;
+                font-weight: lighter;
+                font-size: .8em;
+
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    width: 2px;
+                    height: 10px;
+                    background: #ababab;
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        p {
+            font-weight: lighter;
+            font-size: .8em;
+        }
     }
 }

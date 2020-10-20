@@ -85,15 +85,6 @@ header .header-wrap {
           align-items: center;
 }
 
-header .header-wrap:before {
-  content: '';
-  display: block;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
 header .header-wrap .logo {
   width: 10%;
   margin-left: 15%;
@@ -737,41 +728,6 @@ main .ykhurb_wrap .list_btn {
 
 .section01 .historyWrap .slide ul li figure figcaption p {
   color: #ababab;
-}
-
-.historyWrap .arrow_btn {
-  position: absolute;
-  right: 15%;
-  top: 28%;
-  -webkit-transform: translate(-15%, -28%);
-          transform: translate(-15%, -28%);
-}
-
-.historyWrap .arrow_btn button {
-  border: 1px solid #ababab;
-  background-color: transparent;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 2.5rem;
-  padding: 5px;
-  outline: none;
-}
-
-.historyWrap .arrow_btn button:hover {
-  background-color: #04a6e1;
-}
-
-.historyWrap .arrow_btn button img {
-  width: 50%;
-}
-
-.historyWrap .arrow_btn p {
-  color: #ababab;
-}
-
-.historyWrap .arrow_btn p mark {
-  background-color: transparent;
-  color: #333;
 }
 
 .section02 {

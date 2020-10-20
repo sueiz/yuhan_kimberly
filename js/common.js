@@ -1,7 +1,7 @@
 $(function () {
     //start    
     $('header').load('https://sueiz.github.io/yuhan_kimberly/inc_head_foot .header-wrap', header);
-    $('footer').load('https://sueiz.github.io/yuhan_kimberly/inc_head_foot footer');
+    $('footer').load('https://sueiz.github.io/yuhan_kimberly/inc_head_foot .footer-wrap');
 
     $.ajax({
         url: '../inc_head_foot.html',
