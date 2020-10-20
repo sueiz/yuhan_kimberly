@@ -9,6 +9,8 @@ $(function () {
                 type, kind, imgSrc, title, url;
 
             function funList(code) {
+
+                // 리스트 초기화
                 news = '';
                 $(ykonair_data).find('item').each(function () {
 

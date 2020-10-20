@@ -4,7 +4,7 @@ $(function () {
     $('footer').load('https://sueiz.github.io/yuhan_kimberly/inc_head_foot .footer-wrap');
 
     $.ajax({
-        url: '../inc_head_foot.html',
+        url: 'https://sueiz.github.io/yuhan_kimberly/inc_head_foot',
         success: function (data) {
             $('main').prepend($(data).find('.ykhurb_wrap'));
             $('main').prepend($(data).find('.ykhurb_wrap2'));
