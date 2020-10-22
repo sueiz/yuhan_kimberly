@@ -48,9 +48,6 @@
 // });
 
 $(function () {
-    
-
-
     var resMsg;
     var mq = window.matchMedia('(max-width:1024px)');
 
