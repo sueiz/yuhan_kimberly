@@ -4,7 +4,7 @@ $(function () {
     $('footer').load('/yuhan_kimberly/inc_head_foot.html .footer-wrap');
 
     $.ajax({
-        url: '../inc_head_foot.html',
+        url: '/yuhan_kimberly/inc_head_foot.html',
         success: function (data) {
             $('main').prepend($(data).find('.ykhurb_wrap'));
             $('main').prepend($(data).find('.ykhurb_wrap2'));
