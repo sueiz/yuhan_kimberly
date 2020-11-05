@@ -450,9 +450,11 @@
 
                                 img {
                                     width: 100%;
+                                    display: block;
                                 }
 
                                 figcaption {
+                                    height: auto;
 
                                     &::before {
                                         content: '';

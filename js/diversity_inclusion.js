@@ -5,7 +5,8 @@ $(function() {
 
 
     /* Tab 클릭 */
-    $('.division ul li').on('click',function(){
+    $('.division ul li').on('click',function(e){
+        e.preventDefault();
         var idx = $(this).index();
 
         $('.division ul li').removeClass('active');

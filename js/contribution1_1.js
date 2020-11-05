@@ -5,7 +5,8 @@ $(function() {
     $('.plant_division ul li').eq(0).addClass('active');
 
     /* Tab 클릭 */
-    $('.plant_division ul li').on('click',function(){
+    $('.plant_division ul li').on('click',function(e){
+        e.preventDefault();
         var idx = $(this).index();
 
         $('.plant_division ul li').removeClass('active');

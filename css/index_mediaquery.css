@@ -385,8 +385,10 @@
   }
   .section03 .csr-wrap .csr .csr_list li a figure img {
     width: 100%;
+    display: block;
   }
   .section03 .csr-wrap .csr .csr_list li a figure figcaption {
+    height: auto;
     position: absolute;
     left: 0;
     bottom: 0;

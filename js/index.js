@@ -1,52 +1,3 @@
-// window.addEventListener('DOMContentLoaded', function () {
-//     var section = document.getElementsByName('section');
-//     var header = document.querySelector('header');
-//     console.log(section);
-
-//     var secPos = [];
-//     var first = 0,
-//         last = 0;
-//     var idx = 0;
-
-//     section.forEach(function (el) {
-//         secPos.push(el.offsetTop);
-//     })
-
-    // setTimeout(function () {
-    //     window.scrollTo(0, 0);
-    // }, 10);
-
-//     var menuHeight = document.querySelector('header').offsetHeight;
-//     var bln = false;
-//     window.addEventListener('mousewheel', function (e) {
-//         if (bln) return;
-
-//         if (e.wheelDelta < 0) {
-//             //down
-//             if (idx < section.length - 1) {
-//                 idx++;
-//             }
-//             header.classList.add('scrollDown');
-//             header.style.display = 'fixed';
-//         } else {
-//             //up
-//             if (idx > 0) {
-//                 idx--;
-//             }
-//             header.classList.add('scrollDown');
-//             if (idx == 0) {
-//                 header.classList.remove('scrollDown');
-//             }
-//         }
-//         // console.log((secPos[idx]-menuHeight))
-
-//         bln = true;
-//         setTimeout(function () {
-//             bln = false;
-//         }, 1000);
-//     });
-// });
-
 $(function () {
     var resMsg;
     var mq = window.matchMedia('(max-width:1024px)');
@@ -107,7 +58,8 @@ $(function () {
             });
 
             /* 사이드 메뉴 & 마우스 휠 이벤트 */
-            var secEl = document.getElementsByName('section');
+            var secEl = document.querySelectorAll('section');
+            console.log(secEl)
             var tabBtn = document.querySelectorAll('.side_menu ul li');
             var header = document.querySelector('header');
             var footer = document.querySelector('footer');
@@ -178,7 +130,6 @@ $(function () {
     }
     nav();
 
-
     /* SLIDE */
     $(".slide ul").slick({
         dots: true,
@@ -209,40 +160,4 @@ $(function () {
     $('.slide ul').on('afterChange', function (event, slick, currentSlide) {
         $('.bn').eq(currentSlide + 1).find('figure').addClass('active');
     });
-
-
-
-
-
-    // // section 01 history
-    // var idx = 0;
-
-    // $('.arrow-up').on('click',function(){
-
-
-    //     $('.yk_history figure').eq(idx).css('left','-100%');
-    //     idx ++;
-    //     $('.yk_history figure').eq(idx).css({
-    //         left: '0%',
-    //         transition: '.5s'
-    //     });
-
-    //     if(idx == $('.yk_history figure').length-1){
-    //         $(".arrow-up").off('click');
-
-    //     }
-    // });
-
-    // $('.arrow-down').on('click',function(){
-    //     $('.yk_history figure').eq(idx).css('left','100%');
-    //     idx --;
-    //     $('.yk_history figure').eq(idx).css({
-    //         left: '-0%',
-    //         transition: '.5s'
-    //     });
-
-    //     if(idx == 0){
-    //         $('.arrow-down').attr("disabled","disabled");
-    //     }
-    // });
 });
