@@ -2,7 +2,7 @@
 header {
   width: 100%;
   height: 75px;
-  background: transperant;
+  background: transparent;
   position: fixed;
   left: 0;
   top: 0;
@@ -553,8 +553,6 @@ main .ykhurb_wrap .list_btn {
 .ykhurb_wrap2 .ykhurb ul {
   width: 100%;
   font-size: 0;
-  -webkit-padding-start: 0px;
-          padding-inline-start: 0px;
 }
 
 .ykhurb_wrap2 .ykhurb ul li {
