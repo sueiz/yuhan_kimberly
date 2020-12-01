@@ -43,8 +43,6 @@ $(function () {
                     $('header').removeClass('active');
                 }
             })
-            
-
         } else if (resMsg == 'pc') {
             console.log('pc');
             $('header').on('mouseover', function () {
@@ -59,7 +57,6 @@ $(function () {
 
             /* 사이드 메뉴 & 마우스 휠 이벤트 */
             var secEl = document.querySelectorAll('section');
-            console.log(secEl)
             var tabBtn = document.querySelectorAll('.side_menu ul li');
             var header = document.querySelector('header');
             var footer = document.querySelector('footer');
@@ -77,8 +74,10 @@ $(function () {
 
             secEl.forEach(function (el, idx) {
                 tabBtn[0].classList.add('active');
-                el.addEventListener('mousewheel', function (e) {
-                    if (e.wheelDelta < 0) {
+                el.addEventListener('mousewheel',indexSwift);
+                el.addEventListener('DOMMouseScroll',indexSwift);
+                function indexSwift(e) {
+                    if(e.wheelDelta < 0 || e.detail > 0) {
                         header.classList.add('scrollDown');
                         try {
                             tabBtn[idx].classList.remove('active');
@@ -86,8 +85,7 @@ $(function () {
                         } catch {
                         }
                         i = idx + 1;
-                    } else {
-                        
+                    } else if(e.wheelDelta > 0 || e.detail < 0) {
                         try {
                             tabBtn[idx].classList.remove('active');
                             tabBtn[idx].previousElementSibling.classList.add('active');
@@ -95,22 +93,20 @@ $(function () {
                             tabBtn[0].classList.add('active');
                         }
                         i = idx - 1;
-
                         if (i == 0) {
                             header.classList.remove('scrollDown');
                         }
                     }
-                    
+
                     var footerH = footer.offsetHeight;
                     if(secEl.length-1 >= i){
                         window.scroll(0, secArr[i]);
                     }else{
                         window.scroll(0, secArr[secEl.length-1]+footerH);
                     }
-
-                })
-            })
-
+                }
+            });
+            
             tabBtn.forEach(function (sl, idx) {
                 sl.addEventListener('click', function (e) {
                     e.preventDefault();
