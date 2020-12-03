@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("common.css");
 header {
   width: 100%;
@@ -41,7 +42,7 @@ header.active:after {
 
 header.scrollDown {
   background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 header.scrollDown nav > .top_menu > li > a {
@@ -58,6 +59,10 @@ header.scrollDown .header-wrap .logo a {
   height: 75px;
   background: url("../img/yk_logo_normal.png") no-repeat center;
   background-size: contain;
+}
+
+header.scrollDown .header-wrap .menu-trigger span {
+  background: #333;
 }
 
 header .header-wrap {
@@ -100,6 +105,15 @@ header .header-wrap .logo a img {
   margin: 0 auto;
 }
 
+.header-wrap nav.active {
+  display: block;
+}
+
+.header-wrap nav.active .top_menu {
+  background: rgba(255, 255, 255, 0.9);
+  height: 100vh;
+}
+
 .header-wrap nav > .top_menu {
   font-size: 0;
   width: 100%;
@@ -140,13 +154,12 @@ header .header-wrap .logo a img {
 }
 
 .header-wrap nav > .top_menu > li > a {
+  position: relative;
   color: #fff;
   font-weight: 400;
   text-align: center;
-  font-size: 1em;
   -webkit-transition: color ease 0.3s;
   transition: color ease 0.3s;
-  position: relative;
 }
 
 /* header subMenu */
@@ -201,7 +214,6 @@ header .top_menu li > ul > li > a:hover {
 
 /* header language */
 .header-wrap > .language {
-  width: 10%;
   margin-right: 10%;
 }
 
@@ -668,5 +680,99 @@ footer > div ul li:after {
 footer > div p {
   font-weight: lighter;
   font-size: .8em;
+}
+
+@media (min-width: 1024px) {
+  header .header-wrap .menu-trigger {
+    display: none;
+  }
+}
+
+/* 1024px 이하 */
+@media (max-width: 1024px) {
+  html, body {
+    overflow: visible;
+  }
+  header .header-wrap {
+    display: block;
+  }
+  header .header-wrap .logo {
+    width: 100%;
+    margin: 0 auto;
+  }
+  header .header-wrap .logo a {
+    margin: 0 auto;
+  }
+  header .header-wrap .logo a.active {
+    display: block;
+    width: 180px;
+    height: 75px;
+    background: url("../img/yk_logo_normal.png") no-repeat center;
+    background-size: contain;
+  }
+  header .header-wrap .logo a img {
+    width: 100%;
+    z-index: 10;
+  }
+  header .header-wrap .logo a img:nth-of-type(2) {
+    display: none;
+  }
+  /* navigation */
+  .header-wrap nav {
+    width: 100%;
+    display: none;
+  }
+  .header-wrap nav > .top_menu {
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  .header-wrap nav > .top_menu > li {
+    padding: 1% 0;
+    display: block;
+    -webkit-transition: all .1s;
+    transition: all .1s;
+  }
+  .header-wrap nav > .top_menu > li:hover::before {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  .header-wrap nav > .top_menu > li > a {
+    color: #333;
+    font-weight: 700;
+  }
+  /* sub menu */
+  header .top_menu li > .sub_menu {
+    display: none;
+  }
+  header .top_menu li > .sub_menu > li {
+    display: none;
+  }
+  header .top_menu li > .sub_menu > li.active {
+    display: block;
+  }
+  header .top_menu li > .sub_menu > li > a {
+    padding: 0;
+    font-weight: 400;
+    line-height: 40px;
+  }
+  /* language */
+  .header-wrap {
+    position: relative;
+  }
+  .header-wrap > .language {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .header-wrap .menu-trigger {
+    display: block;
+  }
+  main .side_menu,
+  main .ykhurb_wrap,
+  main .ykhurb_wrap2 {
+    display: none;
+  }
 }
 /*# sourceMappingURL=inc_head_foot.css.map */

@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
-
 * {font-family: 'Noto Sans KR', sans-serif;}
 
-
+.eng-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
 html,body{
     margin:0;
 }
 
-html {scroll-behavior:smooth;}
 ul,li{
     margin:0; padding:0;
     list-style:none;
@@ -25,8 +26,8 @@ a {
 p {
     color: #666666;
     font-weight: 300;
-    
 }
+
 *{
     letter-spacing: -0.35px;
     box-sizing: border-box;

@@ -1,4 +1,5 @@
-@import url("common_index.css");
+@charset "UTF-8";
+@import url("common.css");
 html,
 body {
   overflow: hidden;
@@ -17,20 +18,27 @@ html {
   transition: 1s;
 }
 
-.imgWrap {
+.section00 {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-}
-
-.imgWrap .main_img {
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
-.imgWrap .main_img video {
+.section00 .main_vdo {
   width: 100%;
+  height: 100vh;
+}
+
+.section00 .main_vdo video {
+  height: 120vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .section01 {
@@ -92,7 +100,7 @@ html {
 }
 
 .section01 .historyWrap .slide ul li figure figcaption strong {
-  font-size: 4rem;
+  font-size: 4em;
   font-weight: 900;
 }
 
@@ -111,25 +119,22 @@ html {
   height: 100vh;
   overflow: hidden;
   background: url("../img/section02_bg.jpg") no-repeat center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section02 .product-wrap {
   width: 100%;
-  margin: 5rem auto 0;
-}
-
-.section02 .product-wrap .text_02 {
-  width: 70%;
-  margin: 25rem auto;
+  margin-left: 15%;
 }
 
 .section02 .product-wrap .text_02 h2 {
   font-size: 4em;
-  font-weight: bold;
-}
-
-.section02 .product-wrap .text_02 .philosophy {
-  margin: 2% 0;
+  line-height: 2;
 }
 
 .section02 .product-wrap .text_02 .philosophy:hover a {
@@ -183,12 +188,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 0;
-}
-
-.section03 .csr-wrap .csr .csr_list li {
-  display: inline-block;
-  width: 33%;
 }
 
 .section03 .csr-wrap .csr .csr_list li a figure {
@@ -216,6 +215,11 @@ html {
   transition: .3s;
 }
 
+.section03 .csr-wrap .csr .csr_list li a figure figcaption:hover {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .section03 .csr-wrap .csr .csr_list li a figure figcaption::before {
   content: '';
   display: block;
@@ -234,33 +238,6 @@ html {
           animation: arrow-ani .35s .2s linear infinite alternate both;
 }
 
-@-webkit-keyframes arrow-ani {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
-  }
-}
-
-@keyframes arrow-ani {
-  0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
-  }
-}
-
-.section03 .csr-wrap .csr .csr_list li a figure figcaption:hover {
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
 .section03 .csr-wrap .csr .csr_list li a figure figcaption:hover::before {
   opacity: 0;
 }
@@ -271,24 +248,6 @@ html {
   font-weight: 600;
   -webkit-animation: nav-font-animations .5s .3s infinite both alternate;
           animation: nav-font-animations .5s .3s infinite both alternate;
-}
-
-@-webkit-keyframes nav-font-animations {
-  0% {
-    color: #063;
-  }
-  100% {
-    color: #d97234;
-  }
-}
-
-@keyframes nav-font-animations {
-  0% {
-    color: #063;
-  }
-  100% {
-    color: #d97234;
-  }
 }
 
 .section03 .csr-wrap .csr .csr_list li a figure figcaption h3 {
@@ -454,5 +413,217 @@ footer > div ul li:after {
 footer > div p {
   font-weight: lighter;
   font-size: .8em;
+}
+
+@-webkit-keyframes arrow-ani {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+}
+
+@keyframes arrow-ani {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+}
+
+@-webkit-keyframes nav-font-animations {
+  0% {
+    color: #063;
+  }
+  100% {
+    color: #d97234;
+  }
+}
+
+@keyframes nav-font-animations {
+  0% {
+    color: #063;
+  }
+  100% {
+    color: #d97234;
+  }
+}
+
+/* 1024px 이하 */
+@media (max-width: 1024px) {
+  /* VIDEO */
+  .section00 .main_vdo video {
+    height: 100vh;
+  }
+  /* HISTORY */
+  .section01 {
+    background: #fff;
+  }
+  .section01 .historyWrap {
+    width: 90%;
+  }
+  .section01 .historyWrap .slide {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .section01 .historyWrap .slide ul li figure {
+    width: 100%;
+    display: block;
+  }
+  .section01 .historyWrap .slide ul li figure img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .section01 .historyWrap .slide ul li figure figcaption {
+    width: 100%;
+  }
+  .section01 .historyWrap .slide ul li figure figcaption strong {
+    font-size: 4rem;
+  }
+  .section01 .historyWrap .slide ul li figure figcaption span {
+    display: block;
+    font-size: 3em;
+  }
+  .section02 .product-wrap {
+    margin-left: 10%;
+  }
+  .section03 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section03 .csr-wrap {
+    width: 90%;
+  }
+  .section03 .csr-wrap .csr .csr_list li a figure figcaption {
+    height: 45px;
+    bottom: 0;
+  }
+  .section03 .csr-wrap .csr .csr_list li a figure figcaption::before {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  .section03 .csr-wrap .csr .csr_list li a figure figcaption h3 {
+    font-size: .8em;
+  }
+  .section03 .csr-wrap .csr .csr_list li a figure figcaption p {
+    display: none;
+  }
+  .section04 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section04 .news-wrap {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section01 .historyWrap {
+    width: 95%;
+  }
+  .section01 .historyWrap .slide ul li figure figcaption strong {
+    font-size: 2em;
+  }
+  .section01 .historyWrap .slide ul li figure figcaption span {
+    font-size: 1em;
+  }
+  .section01 .historyWrap .slide ul li figure figcaption p {
+    font-size: .8em;
+  }
+  .section02 .product-wrap {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .section02 .product-wrap .text_02 h2 {
+    font-size: 3em;
+  }
+  .section02 .product-wrap .text_02 .philosophy a {
+    font-size: .8em;
+  }
+  .section03 .csr-wrap {
+    width: 95%;
+  }
+  .section03 .csr-wrap .title_03 h2 {
+    text-align: left;
+    font-size: 3em;
+  }
+  .section04 .news-wrap {
+    width: 95%;
+  }
+  .section04 .news-wrap .news .news_top img {
+    width: 100%;
+  }
+  .section04 .news-wrap .news .news_top div {
+    width: 100%;
+  }
+  .section04 .news-wrap .news .news_top div h2 {
+    font-size: 3em;
+  }
+  .section04 .news-wrap .news .news_top div strong {
+    font-size: 1.2em;
+  }
+  .section04 .news-wrap .news .news_top div p {
+    font-size: .8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .section01 .historyWrap {
+    width: 95%;
+  }
+  .section02 .product-wrap {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .section02 .product-wrap .text_02 h2 {
+    font-size: 2em;
+  }
+  .section03 .csr-wrap {
+    width: 95%;
+  }
+  .section03 .csr-wrap .title_03 h2 {
+    text-align: left;
+    font-size: 2em;
+  }
+  .section03 .csr-wrap .csr .csr_list li:nth-of-type(2), .section03 .csr-wrap .csr .csr_list li:nth-of-type(3) {
+    display: none;
+  }
+  .section04 .news-wrap {
+    width: 95%;
+  }
+  .section04 .news-wrap .news .news_top img {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .section04 .news-wrap .news .news_top div {
+    width: 100%;
+  }
+  .section04 .news-wrap .news .news_top div h2 {
+    font-size: 2em;
+  }
+  .section04 .news-wrap .news .news_top div strong {
+    font-size: 1em;
+  }
+  .section04 .news-wrap .news .news_top div p {
+    display: none;
+  }
 }
 /*# sourceMappingURL=index.css.map */
