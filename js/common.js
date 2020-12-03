@@ -84,7 +84,6 @@ $(function () {
                 });
                 $(window).on('scroll',function(){
                     var position = $(window).scrollTop();
-            
                     if(position > 10){
                         $('header').addClass('scrollDown');
             
